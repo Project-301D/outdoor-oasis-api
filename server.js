@@ -5,6 +5,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
+const campground = require('./modules/campground.js');
+
 
 const app = express();
 app.use(cors());
@@ -15,7 +17,19 @@ const PORT = process.env.PORT || 5555;
 
 
 app.get('/', (req, res) => res.status(200).send('Hello from the Server!'));
+app.get('/campground', campgroundhandle);
 
+
+function campgroundhandle(req, res){
+  const {parkCode, description, name} = req.query;
+  // console.log('request.query', parkCode, description, name);
+  campground(parkCode, description,name)
+    .then(park => res.status(200).send(park))
+    .catch((error) => {
+      console.error(error);
+      res.status(500).send('Something went wrong!');
+    });
+}
 
 
 
