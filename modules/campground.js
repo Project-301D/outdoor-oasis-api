@@ -26,9 +26,9 @@ function parseCampGround(campData) {
         images: mostRelevantCamp.images,
         phone: mostRelevantCamp.contacts.phoneNumbers[0].phoneNumber,
         email: mostRelevantCamp.contacts.emailAddresses[0].emailAddress,
+        states: mostRelevantCamp.states,
       });
-    console.log('phone?: ', relevantArray[0].phone);
-    console.log('email?: ', relevantArray[0].email);
+    console.log('states?: ', relevantArray[0].states);
     const campSummaries = relevantArray.map(campground => {
       return new Campground(campground);
     });
@@ -46,6 +46,7 @@ class Campground {
     this.images = data.images;
     this.phone = data.phone;
     this.email = data.email;
+    this.states = data.states;
   }
 }
 
