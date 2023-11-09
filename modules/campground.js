@@ -10,7 +10,7 @@ async function getCampGround(parkCode, description, name) {
   let url = `https://developer.nps.gov/api/v1/parks/?api_key=${process.env.CAMP_API_KEY}&q=${name}`;
   let result = await axios.get(url)
     .then(apiResponse => parseCampGround2(apiResponse.data.data));
-  console.log('result: ', result);
+  // console.log('result: ', result);
   return result;
 }
 
@@ -35,9 +35,12 @@ function parseCampGround2(campData) {
       {latitude: mostRelevantCamp.latitude,
         longitude: mostRelevantCamp.longitude,
         fullName: mostRelevantCamp.fullName,
-        images: mostRelevantCamp.images
+        images: mostRelevantCamp.images,
+        phone: mostRelevantCamp.contacts.phoneNumbers[0].phoneNumber,
+        email: mostRelevantCamp.contacts.emailAddresses[0].emailAddress,
       });
-    console.log(relevantArray);
+    console.log('phone?: ', relevantArray[0].phone);
+    console.log('email?: ', relevantArray[0].email);
     const campSummaries = relevantArray.map(campground => {
       return new Campground2(campground);
     });
@@ -60,6 +63,8 @@ class Campground2 {
     this.longitude = data.longitude;
     this.fullName = data.fullName;
     this.images = data.images;
+    this.phone = data.phone;
+    this.email = data.email;
   }
 }
 
