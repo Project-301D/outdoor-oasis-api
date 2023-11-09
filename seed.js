@@ -12,7 +12,7 @@ async function seed() {
     degF: 39,
     cityName: 'Cades Grove',
     stateName: 'TN',
-    images:['https://cdn.elebase.io/f73a5e12-7a94-4da0-96b6-40fd97435fd2/3dd9239d-d00c-47e8-8900-6d073b44ccbe-ten8dec9e34413f3271b.jpg?rot=auto&q=75', 'https://friendsofthesmokies.org/wp-content/uploads/2016/06/611-Elk-Eco-Tour.jpg','https://cdn.crazyfamilyadventure.com/wp-content/uploads/2020/08/Smokys-Featured1-1024x512.jpg?strip=all&lossy=1&ssl=1']
+    images: ['https://cdn.elebase.io/f73a5e12-7a94-4da0-96b6-40fd97435fd2/3dd9239d-d00c-47e8-8900-6d073b44ccbe-ten8dec9e34413f3271b.jpg?rot=auto&q=75', 'https://friendsofthesmokies.org/wp-content/uploads/2016/06/611-Elk-Eco-Tour.jpg', 'https://cdn.crazyfamilyadventure.com/wp-content/uploads/2020/08/Smokys-Featured1-1024x512.jpg?strip=all&lossy=1&ssl=1']
   });
   console.log('Grand Teton was added');
 
@@ -23,7 +23,7 @@ async function seed() {
     degF: 31,
     cityName: 'Yellowstone National Park',
     stateName: 'WY',
-    images:['https://www.lodgeatbigsky.com/resourcefiles/attractionsmallimages/yellowstone-national-park-montana.jpg?version=10312023145558', 'https://assets.goaaa.com/image/upload/c_fill,g_auto,w_1170,h_593,q_auto:best/v1647563984/singularity-migrated-images/yellowstone-national-park-bison-herd-madison-river-valley-yellowstone-facts-via-magazine-shutterstock_666046720.jpg.jpg', 'https://www.yellowstonevacations.com/wp-content/uploads/2023/08/Mask-Group-52.jpg.webp']
+    images: ['https://www.lodgeatbigsky.com/resourcefiles/attractionsmallimages/yellowstone-national-park-montana.jpg?version=10312023145558', 'https://assets.goaaa.com/image/upload/c_fill,g_auto,w_1170,h_593,q_auto:best/v1647563984/singularity-migrated-images/yellowstone-national-park-bison-herd-madison-river-valley-yellowstone-facts-via-magazine-shutterstock_666046720.jpg.jpg', 'https://www.yellowstonevacations.com/wp-content/uploads/2023/08/Mask-Group-52.jpg.webp']
   });
   console.log('Yellowstone was added');
 
