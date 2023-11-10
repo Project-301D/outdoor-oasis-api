@@ -26,9 +26,6 @@ function campgroundhandle(req, res) {
     });
 }
 
-
-
-
 app.get('*', (req, res) => {
   res.status(404).send('Not Found');
 });
@@ -37,6 +34,5 @@ app.get('*', (req, res) => {
 app.use((error, request, response, next) => {
   response.status(500).send(error.message);
 });
-
 
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));

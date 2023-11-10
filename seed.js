@@ -43,11 +43,3 @@ async function seed() {
 }
 
 seed();
-
-// parkName: {type: String, required: true},
-// lat: {type: Number, required: true},
-// lon: {type: Number, required: true},
-// degF: {type: Number, required: true},
-// cityName: {type: String, required: true},
-// stateName: {type: String, required: true},
-// images: {type: Array, required: true}
